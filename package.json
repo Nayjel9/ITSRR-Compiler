@@ -1,0 +1,34 @@
+{
+  "name": "itsrr-compiler",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Compile ITSRR reports into an Excel workbook",
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "start:web": "node server.mjs",
+    "build:windows": "electron-builder --win portable"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5",
+    "xlsx-js-style": "^1.2.0"
+  },
+  "devDependencies": {
+    "electron": "^37.2.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.itsrr.compiler",
+    "productName": "ITSRR Compiler",
+    "files": [
+      "index.html",
+      "styles.css",
+      "app.js",
+      "main.cjs",
+      "vendor/**/*"
+    ],
+    "win": {
+      "target": "portable"
+    }
+  }
+}

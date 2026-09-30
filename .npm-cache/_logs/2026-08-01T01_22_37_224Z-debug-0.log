@@ -1,0 +1,149 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.11.1
+2 info using node@v25.8.2
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\Administrator\Desktop\ITSRR COmpiler\.npmrc
+5 silly config load:file:C:\Users\Administrator\.npmrc
+6 silly config load:file:C:\Users\Administrator\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install" "--cache" ".npm-cache"
+9 verbose logfile logs-max:10 dir:C:\Users\Administrator\Desktop\ITSRR COmpiler\.npm-cache\_logs\2026-08-01T01_22_37_224Z-
+10 verbose logfile C:\Users\Administrator\Desktop\ITSRR COmpiler\.npm-cache\_logs\2026-08-01T01_22_37_224Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+13 silly idealTree buildDeps
+14 silly fetch manifest xlsx@^0.18.5
+15 silly packumentCache full:https://registry.npmjs.org/xlsx cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/npm 254ms
+17 http fetch GET 200 https://registry.npmjs.org/xlsx 323ms (cache miss)
+18 silly packumentCache full:https://registry.npmjs.org/xlsx set size:undefined disposed:false
+19 silly placeDep ROOT xlsx@0.18.5 OK for: itsrr-compiler@1.0.0 want: ^0.18.5
+20 silly fetch manifest cfb@~1.2.1
+21 silly packumentCache full:https://registry.npmjs.org/cfb cache-miss
+22 silly fetch manifest ssf@~0.11.2
+23 silly packumentCache full:https://registry.npmjs.org/ssf cache-miss
+24 silly fetch manifest wmf@~1.0.1
+25 silly packumentCache full:https://registry.npmjs.org/wmf cache-miss
+26 silly fetch manifest word@~0.3.0
+27 silly packumentCache full:https://registry.npmjs.org/word cache-miss
+28 silly fetch manifest crc-32@~1.2.1
+29 silly packumentCache full:https://registry.npmjs.org/crc-32 cache-miss
+30 silly fetch manifest adler-32@~1.3.0
+31 silly packumentCache full:https://registry.npmjs.org/adler-32 cache-miss
+32 silly fetch manifest codepage@~1.15.0
+33 silly packumentCache full:https://registry.npmjs.org/codepage cache-miss
+34 http fetch GET 200 https://registry.npmjs.org/cfb 49ms (cache miss)
+35 silly packumentCache full:https://registry.npmjs.org/cfb set size:undefined disposed:false
+36 http fetch GET 200 https://registry.npmjs.org/ssf 72ms (cache miss)
+37 silly packumentCache full:https://registry.npmjs.org/ssf set size:undefined disposed:false
+38 http fetch GET 200 https://registry.npmjs.org/wmf 122ms (cache miss)
+39 silly packumentCache full:https://registry.npmjs.org/wmf set size:undefined disposed:false
+40 http fetch GET 200 https://registry.npmjs.org/codepage 125ms (cache miss)
+41 silly packumentCache full:https://registry.npmjs.org/codepage set size:undefined disposed:false
+42 http fetch GET 200 https://registry.npmjs.org/crc-32 134ms (cache miss)
+43 silly packumentCache full:https://registry.npmjs.org/crc-32 set size:undefined disposed:false
+44 http fetch GET 200 https://registry.npmjs.org/adler-32 274ms (cache miss)
+45 silly packumentCache full:https://registry.npmjs.org/adler-32 set size:undefined disposed:false
+46 http fetch GET 200 https://registry.npmjs.org/word 404ms (cache miss)
+47 silly packumentCache full:https://registry.npmjs.org/word set size:undefined disposed:false
+48 silly placeDep ROOT adler-32@1.3.1 OK for: xlsx@0.18.5 want: ~1.3.0
+49 silly placeDep ROOT cfb@1.2.2 OK for: xlsx@0.18.5 want: ~1.2.1
+50 silly placeDep ROOT codepage@1.15.0 OK for: xlsx@0.18.5 want: ~1.15.0
+51 silly placeDep ROOT crc-32@1.2.2 OK for: xlsx@0.18.5 want: ~1.2.1
+52 silly placeDep ROOT ssf@0.11.2 OK for: xlsx@0.18.5 want: ~0.11.2
+53 silly placeDep ROOT wmf@1.0.2 OK for: xlsx@0.18.5 want: ~1.0.1
+54 silly placeDep ROOT word@0.3.0 OK for: xlsx@0.18.5 want: ~0.3.0
+55 silly fetch manifest crc-32@~1.2.0
+56 silly packumentCache full:https://registry.npmjs.org/crc-32 cache-miss
+57 silly fetch manifest frac@~1.1.2
+58 silly packumentCache full:https://registry.npmjs.org/frac cache-miss
+59 http cache https://registry.npmjs.org/crc-32 7ms (cache hit)
+60 silly packumentCache full:https://registry.npmjs.org/crc-32 set size:32170 disposed:false
+61 http fetch GET 200 https://registry.npmjs.org/frac 49ms (cache miss)
+62 silly packumentCache full:https://registry.npmjs.org/frac set size:undefined disposed:false
+63 silly placeDep ROOT frac@1.1.2 OK for: ssf@0.11.2 want: ~1.1.2
+64 silly reify moves {}
+65 silly audit bulk request {
+65 silly audit   xlsx: [ '0.18.5' ],
+65 silly audit   'adler-32': [ '1.3.1' ],
+65 silly audit   cfb: [ '1.2.2' ],
+65 silly audit   codepage: [ '1.15.0' ],
+65 silly audit   'crc-32': [ '1.2.2' ],
+65 silly audit   ssf: [ '0.11.2' ],
+65 silly audit   wmf: [ '1.0.2' ],
+65 silly audit   word: [ '0.3.0' ],
+65 silly audit   frac: [ '1.1.2' ]
+65 silly audit }
+66 http cache frac@https://registry.npmjs.org/frac/-/frac-1.1.2.tgz 0ms (cache hit)
+67 http cache ssf@https://registry.npmjs.org/ssf/-/ssf-0.11.2.tgz 0ms (cache hit)
+68 http cache wmf@https://registry.npmjs.org/wmf/-/wmf-1.0.2.tgz 0ms (cache hit)
+69 http cache adler-32@https://registry.npmjs.org/adler-32/-/adler-32-1.3.1.tgz 0ms (cache hit)
+70 http cache word@https://registry.npmjs.org/word/-/word-0.3.0.tgz 0ms (cache hit)
+71 http cache crc-32@https://registry.npmjs.org/crc-32/-/crc-32-1.2.2.tgz 0ms (cache hit)
+72 silly tarball no local data for frac@https://registry.npmjs.org/frac/-/frac-1.1.2.tgz. Extracting by manifest.
+73 silly tarball no local data for ssf@https://registry.npmjs.org/ssf/-/ssf-0.11.2.tgz. Extracting by manifest.
+74 http cache cfb@https://registry.npmjs.org/cfb/-/cfb-1.2.2.tgz 0ms (cache hit)
+75 silly tarball no local data for wmf@https://registry.npmjs.org/wmf/-/wmf-1.0.2.tgz. Extracting by manifest.
+76 silly tarball no local data for adler-32@https://registry.npmjs.org/adler-32/-/adler-32-1.3.1.tgz. Extracting by manifest.
+77 silly tarball no local data for word@https://registry.npmjs.org/word/-/word-0.3.0.tgz. Extracting by manifest.
+78 silly tarball no local data for crc-32@https://registry.npmjs.org/crc-32/-/crc-32-1.2.2.tgz. Extracting by manifest.
+79 http cache xlsx@https://registry.npmjs.org/xlsx/-/xlsx-0.18.5.tgz 0ms (cache hit)
+80 http cache codepage@https://registry.npmjs.org/codepage/-/codepage-1.15.0.tgz 0ms (cache hit)
+81 silly tarball no local data for cfb@https://registry.npmjs.org/cfb/-/cfb-1.2.2.tgz. Extracting by manifest.
+82 silly tarball no local data for xlsx@https://registry.npmjs.org/xlsx/-/xlsx-0.18.5.tgz. Extracting by manifest.
+83 silly tarball no local data for codepage@https://registry.npmjs.org/codepage/-/codepage-1.15.0.tgz. Extracting by manifest.
+84 http fetch GET 200 https://registry.npmjs.org/word/-/word-0.3.0.tgz 88ms (cache miss)
+85 http fetch GET 200 https://registry.npmjs.org/adler-32/-/adler-32-1.3.1.tgz 92ms (cache miss)
+86 http fetch GET 200 https://registry.npmjs.org/crc-32/-/crc-32-1.2.2.tgz 93ms (cache miss)
+87 http fetch GET 200 https://registry.npmjs.org/frac/-/frac-1.1.2.tgz 99ms (cache miss)
+88 http fetch GET 200 https://registry.npmjs.org/ssf/-/ssf-0.11.2.tgz 100ms (cache miss)
+89 http fetch GET 200 https://registry.npmjs.org/wmf/-/wmf-1.0.2.tgz 106ms (cache miss)
+90 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 271ms
+91 silly audit report {
+91 silly audit report   xlsx: [
+91 silly audit report     {
+91 silly audit report       id: 1108110,
+91 silly audit report       url: 'https://github.com/advisories/GHSA-4r6h-8v6p-xvw6',
+91 silly audit report       title: 'Prototype Pollution in sheetJS',
+91 silly audit report       severity: 'high',
+91 silly audit report       vulnerable_versions: '<0.19.3',
+91 silly audit report       cwe: [Array],
+91 silly audit report       cvss: [Object]
+91 silly audit report     },
+91 silly audit report     {
+91 silly audit report       id: 1108111,
+91 silly audit report       url: 'https://github.com/advisories/GHSA-5pgg-2g8v-p4x9',
+91 silly audit report       title: 'SheetJS Regular Expression Denial of Service (ReDoS)',
+91 silly audit report       severity: 'high',
+91 silly audit report       vulnerable_versions: '<0.20.2',
+91 silly audit report       cwe: [Array],
+91 silly audit report       cvss: [Object]
+91 silly audit report     }
+91 silly audit report   ]
+91 silly audit report }
+92 silly packumentCache corgi:https://registry.npmjs.org/xlsx cache-miss
+93 http fetch GET 200 https://registry.npmjs.org/cfb/-/cfb-1.2.2.tgz 306ms (cache miss)
+94 http fetch GET 200 https://registry.npmjs.org/xlsx 57ms (cache miss)
+95 silly packumentCache corgi:https://registry.npmjs.org/xlsx set size:undefined disposed:false
+96 http fetch GET 200 https://registry.npmjs.org/codepage/-/codepage-1.15.0.tgz 6863ms (cache miss)
+97 http fetch GET 200 https://registry.npmjs.org/xlsx/-/xlsx-0.18.5.tgz 8110ms (cache miss)
+98 silly ADD node_modules/frac
+99 silly ADD node_modules/word
+100 silly ADD node_modules/wmf
+101 silly ADD node_modules/ssf
+102 silly ADD node_modules/crc-32
+103 silly ADD node_modules/codepage
+104 silly ADD node_modules/cfb
+105 silly ADD node_modules/adler-32
+106 silly ADD node_modules/xlsx
+107 verbose cwd C:\Users\Administrator\Desktop\ITSRR COmpiler
+108 verbose os Windows_NT 10.0.26200
+109 verbose node v25.8.2
+110 verbose npm  v11.11.1
+111 notice
+111 notice New minor version of npm available! 11.11.1 -> 11.19.0
+111 notice Changelog: https://github.com/npm/cli/releases/tag/v11.19.0
+111 notice To update run: npm install -g npm@11.19.0
+111 notice  { force: true, Symbol(proc-log.meta): true }
+112 verbose exit 0
+113 info ok

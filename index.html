@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ITSRR Compiler</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">SERVICE REPORT WORKSPACE</p>
+        <h1>ITSRR Compiler</h1>
+        <p class="subtitle">Capture support reports and compile them into one Excel workbook.</p>
+      </div>
+      <div class="hero-actions">
+        <button id="archiveBtn" class="button button-secondary" type="button">Archive finished</button>
+        <button id="exportBtn" class="button button-primary" type="button">Export to Excel</button>
+      </div>
+    </header>
+
+    <section class="card paste-card">
+      <div class="section-heading paste-heading">
+        <div>
+          <p class="step">QUICK PASTE</p>
+          <h2>Paste a complete ITSRR report</h2>
+          <p class="helper">The report is recognized and added automatically when you paste it.</p>
+        </div>
+        <button id="compilePasteBtn" class="button button-dark" type="button">Compile pasted text</button>
+      </div>
+      <textarea id="pasteInput" rows="8" placeholder="ITSRR number: SO-07-04&#10;Terminal User: LIC82&#10;Date and Time Reported: 08/01/2026, 8:09 AM&#10;Reported By: Marck&#10;Problem: Office Printer not printing&#10;&#10;Date and time resolved: 08/01/26 - 8:25 PM&#10;Cause: Spooler error&#10;Solution: Disconnect and reconnect printer&#10;Status: Working"></textarea>
+      <div class="paste-footer">
+        <span id="pasteMessage" role="status"></span>
+        <button id="loadFormBtn" class="text-button" type="button">Review pasted text in form</button>
+      </div>
+    </section>
+
+    <section class="card form-card">
+      <div class="section-heading">
+        <div>
+          <p class="step">NEW RECORD</p>
+          <h2 id="formTitle">Report details</h2>
+        </div>
+        <button id="clearBtn" class="text-button" type="button">Clear form</button>
+      </div>
+
+      <form id="reportForm">
+        <input id="editId" type="hidden">
+        <div class="form-grid">
+          <label>
+            <span>ITSRR number</span>
+            <input id="itsrrNumber" placeholder="e.g. ITSRR-2026-001">
+          </label>
+          <label>
+            <span>Department</span>
+            <input id="department" placeholder="Inferred from ITSRR number when possible">
+          </label>
+          <label>
+            <span>Terminal user</span>
+            <input id="terminalUser" placeholder="Full name or username">
+          </label>
+          <label>
+            <span>Date and time reported</span>
+            <input id="reportedAt" type="datetime-local">
+          </label>
+          <label>
+            <span>Reported by</span>
+            <input id="reportedBy" placeholder="Reporter name">
+          </label>
+          <label class="wide">
+            <span>Problem</span>
+            <textarea id="problem" rows="3" placeholder="Describe the issue"></textarea>
+          </label>
+          <label>
+            <span>Date and time resolved</span>
+            <input id="resolvedAt" type="datetime-local">
+          </label>
+          <label>
+            <span>Status</span>
+            <select id="status">
+              <option value="">— Select status —</option>
+              <option value="Open">Open</option>
+              <option value="Pending">Pending</option>
+              <option value="Resolved">Resolved</option>
+              <option value="Closed">Closed</option>
+              <option value="Working">Working</option>
+            </select>
+          </label>
+          <label class="wide">
+            <span>Cause</span>
+            <textarea id="cause" rows="2" placeholder="Root cause, if known"></textarea>
+          </label>
+          <label class="wide">
+            <span>Solution</span>
+            <textarea id="solution" rows="3" placeholder="Steps taken to resolve the issue"></textarea>
+          </label>
+        </div>
+        <div class="form-actions">
+          <span id="formMessage" role="status"></span>
+          <button id="saveBtn" class="button button-dark" type="submit">Add report</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card records-card">
+      <div class="section-heading records-heading">
+        <div>
+          <p class="step">COMPILED REPORTS</p>
+          <h2>Records <span id="recordCount" class="count">0</span></h2>
+          <p id="filterSummary" class="helper">Showing all tickets</p>
+        </div>
+        <div class="record-filters">
+          <label class="filter-control">
+            <span>Status</span>
+            <select id="statusFilter">
+              <option value="all">All statuses</option>
+              <option value="pending">Pending tickets</option>
+            </select>
+          </label>
+          <input id="searchInput" class="search" type="search" placeholder="Search records...">
+        </div>
+      </div>
+      <div id="emptyState" class="empty-state">
+        <div class="empty-icon">↳</div>
+        <h3>No reports yet</h3>
+        <p>Add your first ITSRR report using the form above.</p>
+      </div>
+      <div id="tableWrap" class="table-wrap" hidden>
+        <table>
+          <thead>
+            <tr>
+              <th>ITSRR no.</th><th>Terminal user</th><th>Reported</th><th>Problem</th><th>Status</th><th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="recordsBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card archive-card">
+      <div class="section-heading archive-heading">
+        <div>
+          <p class="step">MONTH-END ARCHIVES</p>
+          <h2>Archives <span id="archiveCount" class="count">0</span></h2>
+          <p class="helper">Finished tickets are stored here while Pending tickets remain active.</p>
+        </div>
+      </div>
+      <div id="archiveEmpty" class="archive-empty">No archived months yet.</div>
+      <div id="archiveList" class="archive-list"></div>
+    </section>
+  </main>
+  <div id="toast" class="toast" aria-live="polite"></div>
+  <script src="vendor/xlsx.bundle.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

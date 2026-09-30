@@ -1,0 +1,5 @@
+dist/
+release/
+release-archive/
+release-updated/
+node_modules/
